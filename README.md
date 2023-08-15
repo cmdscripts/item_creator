@@ -1,2 +1,2 @@
 # item_creator
-With this Script there is a easyer Way to insert items in your database
+This script provides a simpler method for inserting items into your database.
