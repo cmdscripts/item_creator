@@ -21,9 +21,7 @@ AddEventHandler('item_creator:addItem', function(itemName, itemLabel, itemWeight
     local targetPlayer = ESX.GetPlayerFromId(targetPlayerId)
     local xPlayer = ESX.GetPlayerFromId(targetPlayerId)
     
-    if isRemovable == nil then
-        isRemovable = 1
-    end
+    if not isRemovable then isRemovable = 1 end
 
     if xPlayer.getGroup() == Config.Groups then
         MySQL.Async.execute('INSERT INTO items (name, label, weight, can_remove) VALUES (@name, @label, @weight, @canRemove)', {
